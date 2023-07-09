@@ -31,7 +31,9 @@
         "us-east-1" => %{"description" => "US East (N. Virginia)"},
         "us-east-2" => %{"description" => "US East (Ohio)"},
         "us-west-1" => %{"description" => "US West (N. California)"},
-        "us-west-2" => %{"description" => "US West (Oregon)"}
+        "us-west-001" => %{"description" => "US West (Backblaze B2)"},
+        "us-west-2" => %{"description" => "US West (Oregon)"},
+        "us-west-002" => %{"description" => "US West (Oregon Backblaze b2)"}
       },
       "services" => %{
         "connect" => %{
@@ -133,7 +135,9 @@
             "us-east-1" => %{},
             "us-east-2" => %{},
             "us-west-1" => %{},
-            "us-west-2" => %{}
+            "us-west-001" => %{},
+            "us-west-2" => %{},
+            "us-west-002" => %{}
           }
         },
         "pinpoint" => %{
@@ -1432,8 +1436,16 @@
               "hostname" => "s3.us-west-1.amazonaws.com",
               "signatureVersions" => ["s3", "s3v4"]
             },
+            "us-west-001" => %{
+              "hostname" => "s3.us-west-001.backblazeb2.com",
+              "signatureVersions" => ["s3", "s3v4"]
+            },
             "us-west-2" => %{
               "hostname" => "s3.us-west-2.amazonaws.com",
+              "signatureVersions" => ["s3", "s3v4"]
+            },
+            "us-west-002" => %{
+              "hostname" => "s3.us-west-002.backblazeb2.com",
               "signatureVersions" => ["s3", "s3v4"]
             }
           },
